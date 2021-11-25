@@ -1,4 +1,4 @@
-now_md5=$(cat .circleci/config.yml | md5sum)
+now_md5=$(md5sum < .circleci/config.yml)
 
 set -eu
 set -o pipefail
