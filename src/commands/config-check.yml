@@ -1,12 +1,13 @@
 description: >
-  This command echos "Hello World" using file inclusion.
+  This command check that the circleci-config-merge was performed correctly locally.
+  If the md5sum is different, command will output exit code 1.
 # What will this command do?
 # Descriptions should be short, simple, and clear.
 parameters:
   config-dir:
     type: string
     default: ".circleci/config"
-    description: "Hello to whom?"
+    description: "Path to the yaml file before merge."
 steps:
   - run:
       name: compare md5sum

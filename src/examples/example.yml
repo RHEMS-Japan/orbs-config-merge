@@ -1,13 +1,17 @@
 description: >
-  Sample example description.
 # Provide a use-case based example for using this orb.
 # Everything in the `usage` section will be displayed in the orb registry.
 # Comments are not retained.
 usage:
   version: 2.1
   orbs:
-    <orb-name>: <namespace>/<orb-name>@1.2.3
+    config-merge: rhems-japan/config-merge@x.y.z
+  jobs:
+    - your-job:
+        machine: true
+        steps:
+          - config-merge/config-check
   workflows:
-    use-my-orb:
+    your-workflow:
       jobs:
-        - <orb-name>/<job-name>
+        - your-job
