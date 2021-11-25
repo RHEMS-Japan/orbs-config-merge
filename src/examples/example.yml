@@ -7,10 +7,10 @@ usage:
   orbs:
     config-merge: rhems-japan/config-merge@x.y.z
   jobs:
-    - your-job:
-        machine: true
-        steps:
-          - config-merge/config-check
+    your-job:
+      machine: true
+      steps:
+        - config-merge/config-check
   workflows:
     your-workflow:
       jobs:
